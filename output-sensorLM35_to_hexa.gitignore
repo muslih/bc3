@@ -1,5 +1,6 @@
 int LM35 = A0;
 int nilaiLM35= 0;
+int nilaiBaru= 0;
 
 void setup() {
 Serial.begin(9600);
@@ -7,7 +8,8 @@ Serial.begin(9600);
 
 void loop() {
   nilaiLM35 = analogRead(LM35);
-  nilaiLM35 = nilaiLM35 * 0.488;
+  // nilaiLM35 = nilaiLM35 * 0.488;
+  nilaiLM35 = nilaiBaru * 0.488;
   String a = String(nilaiLM35, HEX);
   Serial.println(a);
   delay(500);
